@@ -1,4 +1,4 @@
-package com.koreait.exam.springbatch_10.app.cart.Entity;
+package com.koreait.exam.springbatch_10.app.cart.entity;
 
 import com.koreait.exam.springbatch_10.app.base.BaseEntity;
 import com.koreait.exam.springbatch_10.app.member.entity.Member;
@@ -8,11 +8,7 @@ import lombok.experimental.SuperBuilder;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import java.util.ArrayList;
-import java.util.List;
 
-import static javax.persistence.CascadeType.ALL;
 import static javax.persistence.FetchType.LAZY;
 
 @Entity
@@ -23,8 +19,10 @@ import static javax.persistence.FetchType.LAZY;
 @ToString(callSuper = true)
 public class CartItem extends BaseEntity {
     @ManyToOne(fetch = LAZY)
+    @ToString.Exclude
     private Member member;
     @ManyToOne(fetch = LAZY)
+    @ToString.Exclude
     private ProductOption productOption;
     private int quantity;
 }

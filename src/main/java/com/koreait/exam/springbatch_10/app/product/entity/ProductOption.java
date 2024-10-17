@@ -27,10 +27,15 @@ public class ProductOption extends BaseEntity {
     private int stockQuantity; // 보유 물건 갯수
 
    @ManyToOne(fetch =LAZY)
+   @ToString.Exclude
     private Product product;
 
    public ProductOption(String color, String size) {
         this.color = color;
         this.size = size;
+    }
+    public boolean isOrderable(int quantity) {
+        if (!isSoldout()) return true;
+        return getStockQuantity() >= quantity;
     }
 }
