@@ -22,8 +22,9 @@ import static javax.persistence.CascadeType.ALL;
 public class Product extends BaseEntity {
     private String name;
     private Integer price;
+    private int salePrice;
     private String makerShopName;
-
+    private int wholesalePrice;
     @Builder.Default
     @OneToMany(mappedBy = "prduct",cascade = ALL, orphanRemoval = true)
     private List<ProductOption> productOptions = new ArrayList<>();
@@ -31,6 +32,8 @@ public class Product extends BaseEntity {
     public void addOption(ProductOption option){
         option.setProduct(this);
         option.setPrice(getPrice());
+        option.setWholesalePrice(getWholesalePrice());
+        option.setSalePrice(getSalePrice());
         productOptions.add(option);
     }
 }
