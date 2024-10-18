@@ -6,7 +6,6 @@ import com.koreait.exam.springbatch_10.app.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 
 @Service
