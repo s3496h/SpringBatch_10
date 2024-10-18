@@ -32,4 +32,16 @@ public class Order extends BaseEntity {
         orderItem.setOrder(this);
         orderItems.add(orderItem);
     }
+    public int calculatePayPrice() {
+        int payPrice = 0;
+        for (OrderItem orderItem : orderItems) {
+            payPrice += orderItem.calculatePayPrice();
+        }
+        return payPrice;
+    }
+    public void setPaymentDone() {
+        for(OrderItem orderItem : orderItems) {
+            orderItem.setPaymentDone();
+        }
+    }
 }
