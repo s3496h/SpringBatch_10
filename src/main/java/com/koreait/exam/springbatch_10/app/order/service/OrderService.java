@@ -64,4 +64,11 @@ public class OrderService {
         order.setPaymentDone();
         orderRepository.save(order);
     }
+    @Transactional
+    public void refund(Order order) {
+        int payPrice = order.getPayPrice();
+        memberService.addCash(order.getMember(), payPrice, "주문환불_예치금환불");
+        order.setRefundDone();
+        orderRepository.save(order);
+    }
 }
