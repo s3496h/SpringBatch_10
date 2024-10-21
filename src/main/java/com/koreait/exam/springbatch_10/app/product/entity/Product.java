@@ -25,6 +25,7 @@ public class Product extends BaseEntity {
     private int salePrice;
     private String makerShopName;
     private int wholesalePrice;
+    private boolean isSoldOut;
     @Builder.Default
     @OneToMany(mappedBy = "product",cascade = ALL, orphanRemoval = true)
     private List<ProductOption> productOptions = new ArrayList<>();
