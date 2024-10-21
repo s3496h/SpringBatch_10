@@ -1,8 +1,7 @@
 package com.koreait.exam.springbatch_10.app.order.entity;
 
-import com.koreait.exam.springbatch_10.app.base.BaseEntity;
+import com.koreait.exam.springbatch_10.app.base.entity.BaseEntity;
 import com.koreait.exam.springbatch_10.app.member.entity.Member;
-import com.koreait.exam.springbatch_10.app.product.entity.ProductOption;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -12,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static javax.persistence.CascadeType.ALL;
-import static javax.persistence.FetchType.LAZY;
 
 @Entity
 @Getter

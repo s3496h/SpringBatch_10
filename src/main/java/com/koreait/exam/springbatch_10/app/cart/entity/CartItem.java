@@ -1,6 +1,6 @@
 package com.koreait.exam.springbatch_10.app.cart.entity;
 
-import com.koreait.exam.springbatch_10.app.base.BaseEntity;
+import com.koreait.exam.springbatch_10.app.base.entity.BaseEntity;
 import com.koreait.exam.springbatch_10.app.member.entity.Member;
 import com.koreait.exam.springbatch_10.app.product.entity.ProductOption;
 import lombok.*;

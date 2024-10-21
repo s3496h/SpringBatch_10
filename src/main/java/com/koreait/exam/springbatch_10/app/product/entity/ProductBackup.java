@@ -1,6 +1,6 @@
 package com.koreait.exam.springbatch_10.app.product.entity;
 
-import com.koreait.exam.springbatch_10.app.base.BaseEntity;
+import com.koreait.exam.springbatch_10.app.base.entity.BaseEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;

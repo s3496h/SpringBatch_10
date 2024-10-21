@@ -1,6 +1,6 @@
 package com.koreait.exam.springbatch_10.app.cash.entity;
 
-import com.koreait.exam.springbatch_10.app.base.BaseEntity;
+import com.koreait.exam.springbatch_10.app.base.entity.BaseEntity;
 import com.koreait.exam.springbatch_10.app.member.entity.Member;
 
 import lombok.Getter;
