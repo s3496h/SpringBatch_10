@@ -20,8 +20,11 @@ public class Util {
             convertedDate = convertedDate.withDayOfMonth(convertedDate.getMonth().length(convertedDate.isLeapYear()));
             return convertedDate.getDayOfMonth();
         }
-        public static LocalDateTime parse(String pattern, String texttDate) {
-            return LocalDateTime.parse(texttDate, DateTimeFormatter.ofPattern(pattern));
+        public static LocalDateTime parse(String pattern, String textDate) {
+            return LocalDateTime.parse(textDate, DateTimeFormatter.ofPattern(pattern));
+        }
+        public static LocalDateTime parse(String textDate) {
+            return parse("yyyy-MM-dd HH:mm:ss.SSSSSS",textDate);
         }
     }
 }
