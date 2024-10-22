@@ -104,6 +104,9 @@ public class DevInitData {
             orderService.payByRestCashOnly(order3);
             Order order4 = helper.order(member1, Arrays.asList(product1Option__RED_95, product2Option__WHITE_95));
             orderService.payByRestCashOnly(order4);
+
+            Order order5 = helper.order(member1, Arrays.asList(product1Option__RED_95, product2Option__WHITE_95));
+            orderService.payByRestCashOnly(order5);
         };
     }
 }
